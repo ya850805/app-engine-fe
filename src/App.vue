@@ -1,6 +1,14 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import axios from "axios";
+import {ref} from "vue";
+
+const test = ref("")
+
+axios.get('/api/test2').then(res => {
+  test.value = res.data
+})
 </script>
 
 <template>
@@ -9,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      {{ test }}
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
