@@ -6,9 +6,9 @@ import {ref} from "vue";
 
 const test = ref("")
 
-axios.get('/api/test2').then(res => {
-  test.value = res.data
-})
+// axios.get('http://localhost:8500/share-memo/welcome').then(res => {
+//   test.value = res.data
+// })
 </script>
 
 <template>
